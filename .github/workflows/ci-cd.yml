@@ -50,9 +50,11 @@ jobs:
           node-version: '18'
 
       - name: Install Dependencies
+        working-directory: ./app
         run: npm install
 
       - name: Run Tests
+        working-directory: ./test
         run: npm test
 
       - name: Configure AWS Credentials
