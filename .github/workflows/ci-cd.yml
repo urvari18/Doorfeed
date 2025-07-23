@@ -51,7 +51,7 @@ jobs:
 
       - name: Install Dependencies
         working-directory: ./app
-        run: npm install
+        run: npm install --save-dev jest supertest
 
       - name: Run Tests
         working-directory: ./app
