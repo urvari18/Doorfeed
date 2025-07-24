@@ -81,8 +81,7 @@ jobs:
       - name: Deploy to ECS
         run: |
           aws ecs update-service \
-            --cluster doorfeed-cluster \
-            --service doorfeed-service \
+            --cluster doorfeed-dev-cluster \
             --force-new-deployment
         env:
           AWS_REGION: ${{ env.AWS_REGION }}
